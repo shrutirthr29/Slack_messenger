@@ -1,34 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Slack Messenger App
+
+A simple web app built with Next.js 13 that allows users to send messages directly to a Slack channel.
+
+## Features
+
+- Send messages to a specified Slack channel.
+- Simple user interface with a text input and a send button.
+- Backend API route to handle message sending via Slack's API.
+
+## Tech Stack
+
+- **Frontend:** Next.js 13, React
+- **Backend:** Node.js, Next.js API routes
+- **HTTP Client:** Axios
+- **Deployment:** Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Node.js installed on your machine.
+- A Slack workspace and a Slack app with appropriate permissions (`chat:write` scope).
+- A Slack OAuth token for authenticating API requests.
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/shrutirthr29/Slack_messenger.git
+   cd Slack_messenger
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a `.env` file in the root directory and add your Slack OAuth token:
+
+   ```
+   SLACK_TOKEN=your-slack-oauth-token
+   ```
+
+   - Replace `your-slack-oauth-token` with your actual Slack OAuth token.
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the app in action.
+
+## Usage
+
+- Type a message in the input field.
+- Click the "Send Message" button.
+- The message will be sent to the specified Slack channel.
+
+## Project Structure
+
+```plaintext
+.
+├── src
+│   └── app
+│       ├── api
+│       │   └── sendMessage
+│       │       └── route.js      # API route for handling message sending
+│       ├── page.js               # Main page component with UI
+│       └── globals.css           # Global styles for the app
+├── .env                          # Environment variables (not included in the repo)
+├── package.json                  # Project dependencies and scripts
+└── README.md                     # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project can be easily deployed to Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Deploy to Vercel:**
 
-## Learn More
+   - Log in to your [Vercel](https://vercel.com/) account.
+   - Link the project to your GitHub repository.
+   - Set the environment variables in the Vercel dashboard (`SLACK_TOKEN`).
+   - Deploy!
 
-To learn more about Next.js, take a look at the following resources:
+## References
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Slack API Documentation](https://api.slack.com/)
