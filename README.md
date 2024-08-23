@@ -62,22 +62,6 @@ A simple web app built with Next.js 13 that allows users to send messages direct
 - Click the "Send Message" button.
 - The message will be sent to the specified Slack channel.
 
-## Project Structure
-
-```plaintext
-.
-├── src
-│   └── app
-│       ├── api
-│       │   └── sendMessage
-│       │       └── route.js      # API route for handling message sending
-│       ├── page.js               # Main page component with UI
-│       └── globals.css           # Global styles for the app
-├── .env                          # Environment variables (not included in the repo)
-├── package.json                  # Project dependencies and scripts
-└── README.md                     # Project documentation
-```
-
 ## Deployment
 
 This project can be easily deployed to Vercel.
